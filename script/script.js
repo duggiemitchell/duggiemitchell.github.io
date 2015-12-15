@@ -16,7 +16,6 @@ $(function() {
 });
 
 //Portfolio//
-$('.message').hide();
 
 $(document).ready(function() {
 	$('.fade').hover(
