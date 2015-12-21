@@ -10,6 +10,7 @@ body {/*
   color: #22313F;
   margin: 0;
 }
+/***UTILITIES**/
 .section {
   padding: 88px 20px 88px 20px;
 }
@@ -17,10 +18,23 @@ body {/*
 .is-center {
   text-align: center;
 }
+/**********TYPOGRAPHY*************/
+ p { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h1 { font-size: 5.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+.emphasis {
+  font-family: "Mr De Haviland", cursive;
+  font-size: 48px;
+}
+
+
+
 /*********LINKS***********/
 a {
   color: #E4F1FE;
   text-decoration: none;
+}
+a {
+  color: #D24D57;
 }
 
 a:hover {
@@ -35,7 +49,9 @@ a:hover {
   color: #926069;
 }
 
-
+.logo a {
+  color: #fff;
+}
 /********NAVIGATION**************/
 .fixed-nav-bar {
   position: fixed;
@@ -60,18 +76,16 @@ a:hover {
 .logo {
   color: #fff;
 	float: left;
-	font-size: 36px;
-	line-height: 44px;
+	font-size: 16px;
 	font-weight: 100;
 	letter-spacing:.5px;;
   display: inline;
-  padding: 15px;
+  padding-left: 30px;
+  padding-bottom: 30px;
 }
-.logo a {
-  color: #fff;
-}
+
 .primary-nav {
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: .5px;
   text-transform: uppercase;
   vertical-align: middle;
@@ -85,10 +99,31 @@ a:hover {
 .nav li: last-child {
 	margin-right: 0;
 }
-a {
+
+/***********SPLASH************/
+.splash {
+  margin-top: 10%;
+}
+.splash-info {
+   padding-top: 20px;
+   text-align: center;
+ }
+.primary {
+  background-color: #D24D57;
+  border: #D24D57;
+  color: #fff;
+}
+
+
+
+/********ABOUT ME*************/
+
+.about a {
   color: #D24D57;
 }
-/***********SPLASH************/
+.about a:hover {
+  color: #DB0A5B;
+}
 
 .me-info {
   margin-top: 88px;
@@ -106,52 +141,14 @@ a {
   display: inline-block;
   letter-spacing: 5px;
   vertical-align: bottom;
-
+  padding-top: 15px;
   }
 
-.splash-info {
-   padding-top: 20px;
-   text-align: center;
- }
-.primary,
-input {
-  background-color: #D24D57;
-  border: #D24D57;
-  color: #fff;
-}
+/***********Portfolio*************/
 
-
-
-/********ABOUT ME*************/
-
-.about a {
-  color: #D24D57;
+.about h5 {
   font-weight: bold;
 }
-.about a:hover {
-  color: #DB0A5B;
-}
-.about-info img {
-  border-radius: 50%;
-  height: 150px;
-
-}
-.about-info li{
-  display: inline-block;
-  letter-spacing: 5px;
-}
-/**********TYPOGRAPHY*************/
-.emphasis {
-  font-family: "Mr De Haviland", cursive;
-  font-size: 48px;
-}
-
-/***********Portfolio*************/
-.porfolio {
-  background-color: #6C7A89;
-
-}
-
 .fade {
   border: 5px solid #dfe2e5;
 }
