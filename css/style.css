@@ -96,20 +96,9 @@ section {
 	background-color: #222;
 	border-color: transparent
 }
-.navbar-brand h3 {
-	color: #777;
-	font-weight: bold;
-	padding-left: 20px;
-	margin: 10px;
-}
-@media (min-width) {
-	.navbar-brand h3 {
-	padding-top: 1em;
-	-webkit-margin-before: 1em;
-  -webkit-margin-after: 1em;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 10px;
-}
+.navbar-brand img {
+   padding-left: 20px;
+   margin-top: 5px;
 }
 .navbar-default .navbar-brand {
 	color: #fff;
