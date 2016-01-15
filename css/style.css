@@ -639,8 +639,7 @@ font-size: 11px;
 --------------------*/
 .jumbotron {
 	position: relative;
-	background: #000 url("https://lh3.googleusercontent.com/z8GbbeSDYcpVFnqn22l1Z52WZJemKaeervQqAw-U5fWe65V87tAnEbA69i0uqadfeND0n3zcu2ZqSsmttUTsErfA5GEJMZdHKeqmBzW3GA6ciDeVzj3ClA_Rp0j2Dt8J1ju5_U_sF44gTcP0a2eq6q6XWkwLIHXw052lgRObomdV1AUN6ZQjLMQVLWKvyj0KKr6RZUjJ_u1lxHsR6Zl5h9Dknbn8Me1qL-R9d5Bw2stDcefVv-ZrYMcmX2y6fxkizmcgdZkHKh0F_WZLuxvcmEpZ7YGq90KuFEBZ_gmddrvATeAsl1-7rmJn0Eb1hD-CEcZOgFMboUmp6SDKsAmUw-sBcBuNdQfaxxZY-PUsqDJf8M4wD9K6hE39xPRnSVh10mOJdtN7Hz215_griepFGDESYM5Rc9FWbI1vPbEtFEny4FEGJCk5ThdIwIuGjmbzSpOEJdvIei3XLpYghUIHWRh5N8pvWXBL9Q07oQHOMYQt4IbnRuDB3S8eIv24-v3SkezDjMfNf-HMHVQ0lU8wbOP7ZDV7OC4whnMoAZ1B9k1xpt23o7QX-Y56MqUU2K9qBPia=w1290-h657-no") center center;
-	width: 100%;
+	background: #000 url("/images/Erica/yellowbike.jpg.png");
 	height: 100%;
 	background-size: cover;
 	overflow: hidden;
