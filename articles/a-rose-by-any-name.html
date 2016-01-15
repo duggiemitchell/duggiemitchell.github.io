@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" type="image/svg+xml" href="images/Erica/altlogo.svg">
+		<title>Articles by E. Mitchell | One Not Like the Other</title>
+		<!-- Bootstrap core CSS -->
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!--gOOGLE fONT -->
+
+		<!-- Custom styles-->
+		<link href="/css/style.css" rel="stylesheet">
+	</head>
+	<body id="page-top">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand page-scroll" href="#page-top">
+						<img src="/images/Erica/emlogo.svg" alt="edm" class="img-responsive">
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, aninded other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/index.html#portfolio">Portfolio</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/index.html#team">About</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/index.html#contact">Contact</a>
+						</li>
+						<li>
+							<a href="/articles.html#page-top">Articles</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+<section class="article">
+	<div class="container">
+
+
+		<div class="row">
+			<div class="col-md-3 col-md-offset-3">
+					<img src="/articles/article_img/Shakespeare.jpg.svg" class="img-responsive media-object">
+					<small class="center-block">Shakespeare Pontificates Arrays</small>
+			</div>
+			<div class="col-md-4">
+				<blockquote class="blockquote-reverse" style="margin-top: 15%">
+						<p>&#10077; O Romeo, Romeo! wherefore art thou Romeo?<br>
+							Deny thy father and refuse thy name;<br>
+							Or, if thou wilt not, be but sworn my love,<br>
+							And I'll no longer be a Capulet. &#10078;</p>
+						<footer class="quote">Juliet</footer>
+				</blockquote>
+			</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-3">
+					<div class="section-title-article">
+					<h2>A Rose By Any Other Name</h2>
+					<p> Working with Objects in Javascript</p>
+				</div>
+				<br>
+				<div class="article-item">
+				<p>Each time I feel I've got a handle on one concept, low and behold, something new is presented. Luckily, it's done in such a way that builds on previous challenges.  This challenge introduced associative arrays, which is an an abstract data type made of a collection of <code>key:value</code> pairs.  Keys are sometimes referred to as <em>name</em>, or in other languages, a <em>hash</em>.
+				It's been said that everything in Javascript is an object, which is true... kinda.</p>
+				<p>Values such as <code>Booleans Numbers Strings Undefined</code> and <code>Null</code> (the latter we will not go over now) are <em>primitive</em> values and represent the most simple forms of data we can use in JS programming -  in other words - not objects.</p>
+<br>
+
+				<p>But what you will find is sometimes they are.  That is the beauty of a loosely typed language like Javascript.  But, bececause the language is so forgiving, you, dear programmer, may find yourself in trouble.</p>
+				<p>Below, we are to create a function that takes in two arguments and iterates through an array of objects (first argument) and returns an array with matching properties and values pairs of the second argument.  The property and value of the <code>source</code> object must be present in the <code>collection</code> object in order to be included in the returned array.</p>
+					<p> Given these variables:</p>
+						<iframe width="100%" height="300" src="//jsfiddle.net/duggiemitchell/zcx7t1fd/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+				<p>The third object from the collection argument  <code>[{last: "Capulet"}]</code> should be returned as a new Array as it has the that property-value pair as the second argument.</p>
+				<p>This function introduced me to some new awesome methods:</p>
+				<pre>obj.hasOwnProperty</pre>
+				<p>Returns a boolean <code>(true, false)</code> depending on whether the object has the specified property.</p>
+				<pre>Object.keys(obj)</pre>
+				<p>Returns an new array composed of the Object’s enumerable properties in the same order as a <code>for…​in</code> loop would, without checking down the prototype chain.</p>
+				<p>How this differs from the <code>in</code> operator is this method does not do a check through the object's prototype chain. Using these two methods, along with <code>filter()</code> and <code>every()</code> I was able to successfully compose the function:</p>
+				<iframe width="100%" height="300" src="//jsfiddle.net/duggiemitchell/y2sp6xr4/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+				<p>I hope this succinctly explains what is going on with the above function. The most challenging part for me with using higher order functions is syntax; knowing when and where to chain functions together to get the appropriate solution.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+<p id="back-top">
+	<a href="#top"><i class="fa fa-angle-up"></i></a>
+</p>
+<div class="container">
+	<nav>
+  	<ul class="pager">
+    	<li>
+				<a href="/articles.html">
+					<i class="fa fa-long-arrow-left">&nbsp;BACK TO ARTICLES</i>
+				</a>
+			</li>
+  	</ul>
+</nav>
+</div>
+    <footer>
+      <div class="container">
+        <p>Made with Love by <a href="https://twitter.com/duggiemitchell"><span>Erica Mitchell</span></a></p>
+        <p>Follow:</p>
+          <i class="fa fa-github"></i>
+          <i class="fa fa-linkedin"></i>
+          <i class="fa fa-twitter"></i>
+
+
+      </div>
+    </footer>
+    <!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/SmoothScroll.js"></script>
+		<script src="/js/theme-scripts.js"></script>
+	</body>
+</html>

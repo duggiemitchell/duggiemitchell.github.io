@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" type="image/svg+xml" href="images/Erica/altlogo.svg">
+	<title>Articles by E. Mitchell | Search & Replace</title>
+	<!-- Bootstrap core CSS -->
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!--gOOGLE fONT -->
+
+	<!-- Custom styles-->
+	<link href="/css/style.css" rel="stylesheet">
+</head>
+<body id="page-top">
+	<!-- Navigation -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand page-scroll" href="#page-top">
+					<img src="/images/Erica/emlogo.svg" alt="edm" class="img-responsive">
+				</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="/index.html#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="/index.html#erica">About</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="/index.html#contact">Contact</a>
+          </li>
+          <li>
+            <a href="/articles.html#page-top">Articles</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+<section class="article">
+<div class="container">
+	<div class="col-md-8 col-md-offset-3">
+		<img src="/articles/article_img/highlander.png" class="img-responsive center-block">
+			<div class="section-title-article">
+				<h2>search and replace</h2>
+				<p>Using Regular Expressions to Alter Strings</p>
+			</div>
+			<div class="article-item">
+				<p>This was super fun! Perform a search and replace on the sentence using the arguments provided and return the new sentence. First argument is the sentence to perform the search and replace on.	Second argument is the word that you will be replacing (before).	Third argument is what you will be replacing the second argument with (after).	Note that the case of the original word should be preserved when replacing it.	For example if you mean to replace the word "Book" with the word "dog", it should be replaced as "Dog".</p>
+			<iframe width="100%" height="300" src="//jsfiddle.net/duggiemitchell/x93ryaw6/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+			<p> There is some confusion on my part on the difference between certain methods of <code>arrays</code> and <code>strings</code>, specifically <code>slice()</code>and <code>splice</code>.	These two functions, although they have similar names, are doing two completely different things.</p>
+			<p>Array’s slice accepts two arguments, <em>start</em> and <em>end</em>. It will return a new <code>array</code> containing the elements from the given start index up the one right before the specified end index.</p>
+			<iframe width="100%" height="200" src="//jsfiddle.net/duggiemitchell/62or63z2/1/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+			<p>Although splice also takes, at minimum,two arguments, the meaning is very different.On top of that, splice also mutates the array that calls it as the name implies.</p>
+			<iframe width="100%" height="200" src="//jsfiddle.net/duggiemitchell/mrpbt6gk/1/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+			<p>There is also a <code>string.slice</code>method that	extracts a section of a string and returns a new string. Changes to the text in one string do not affect the other string.	I chose to convert the <code>string (string.protoype.split())</code> to access the index where the second argument occurs <code>(str.indexOf)</code>.</p>
+			<iframe width="100%" height="200" src="//jsfiddle.net/duggiemitchell/noaoLxke/1/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+			<p>Using <code>array.prototype.splice()</code> we get a new <code>array</code> with <code>var before</code> replaced by <code>var after</code></p>
+			<iframe width="100%" height="200" src="//jsfiddle.net/duggiemitchell/r0q9bLko/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+			<p>Finally, the return value is the new string with <code>var after</code></p>
+			<iframe width="100%" height="200" src="//jsfiddle.net/duggiemitchell/r9gakwxo/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+			<p> This works, but what I failed to do was convert the second argument to uppercase.	As I suspected, this would be the problem.	First, test if the first argument is capitalized by checking against a <code>RegEx</code>. If it is capitalized, the third argument to match. to uppecase only returns the first char when using <code>[]</code> notation to access the index, so we must use the <code>substring()</code> method to add the capitalized letter to the remaining <code>string</code></p>
+			<iframe width="100%" height="200" src="//jsfiddle.net/duggiemitchell/5aygfby9/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+			<p>(I'm not as experienced with <code>RegEx</code>, so further study is on the agenda.) Put it all together, and <em>voila! </em>we have the correct solution:</p>
+			<iframe width="100%" height="400" src="//jsfiddle.net/duggiemitchell/0rzzzk3r/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+			<p>Although there are many ways to skin a cat, this is the best I could do.	If I was more familiar with regular expressions, there are more eloquent ways to have the same functionality.	What has held me back in the past is trying to find that eloquence before I solve the problem, but I recently read something profound that changed this for me:	“Everyone has a million bad words in them. Only once they’ve written those million words can they start writing well. So get writing!” This is applied to writing, but the same can be applied to code.	So to me, the only way to get better is to keep doing, and worry about refinement another day.</p>
+			</div>
+		</div>
+	</div>
+
+</section>
+<! --- BACK TO TOP --->
+<p id="back-top">
+<a href="#top"><i class="fa fa-angle-up"></i></a>
+</p>
+<!--- PAGINATION --->
+<div class="container">
+<nav>
+	<ul class="pager">
+		<li>
+			<a href="/articles.html">
+				<i class="fa fa-long-arrow-left">&nbsp;BACK TO ARTICLES</i>
+			</a>
+		</li>
+	</ul>
+</nav>
+</div>
+	<footer>
+		<div class="container">
+			<p>Made with Love by <a href="https://twitter.com/duggiemitchell"><span>Erica Mitchell</span></a></p>
+			<p>Follow:</p>
+				<i class="fa fa-github"></i>
+				<i class="fa fa-linkedin"></i>
+				<i class="fa fa-twitter"></i>
+
+
+		</div>
+	</footer>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/SmoothScroll.js"></script>
+	<script src="/js/theme-scripts.js"></script>
+</body>
+</html>

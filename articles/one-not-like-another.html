@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" type="image/svg+xml" href="images/Erica/altlogo.svg">
+		<title>Articles by E. Mitchell | One Not Like the Other</title>
+		<!-- Bootstrap core CSS -->
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<!--gOOGLE fONT -->
+
+		<!-- Custom styles-->
+		<link href="/css/style.css" rel="stylesheet">
+	</head>
+	<body id="page-top">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand page-scroll" href="#page-top">
+						<img src="/images/Erica/emlogo.svg" alt="edm" class="img-responsive">
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/index.html#portfolio">Portfolio</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/index.html#erica">About</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="/index.html#contact">Contact</a>
+						</li>
+						<li>
+							<a href="/articles.html#page-top">Articles</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+	<section class="article">
+		<div class="container">
+			<div class="row">
+			<div class="col-md-8 col-md-offset-3">
+				<img src="/articles/article_img/abstract.png" class="img-responsive media-object">
+			<div class="section-title-article">
+					<h2 style="margin-top: 5%">One is not like another</h2>
+					<p>Comparing Differences in Two Arrays</p>
+			</div>
+			<div class="article-item">
+				<p>At our meetup Saturday, <a href="#">Kiley Dowling</a> pair programmed with me and it was…​ different. But I’ve heard having someone peek over your shoulder whilst solving an algorithm is both helpful and a real world example of coding in the wild. The particular challenge of the day was to create function comparing two arrays with different values, and returning a new array containing unique; one with values unique to each array</p>
+					<p>My working solution was close, but not quite returning the right answer. Here is the function:</p>
+					<iframe width="100%" height="200" src="//jsfiddle.net/duggiemitchell/wfe4ydvh/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+					<p>The solution I created before meeting today used the <code>filter()</code> and <code>indexOf()</code> functions.  While on some level filtering the function, the results were not quite what I was hoping for:</p>
+					<iframe width="100%" height="300" src="//jsfiddle.net/duggiemitchell/7k49tzs6/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+					<p>This was returning an array minus duplicates. Why? Because by concating the two arrays first, there is no comparison done. I knew it was likely an important step to concat the arrays for better comparison, but my naivity on how <code>indexOf()</code> actually works would explain my error. 	<code>indexOf()</code> is a method of the Array object that returns the index of the first occurence of the specified value, or -1 if not found.  The Array being traversed is not augmented, rather a new array is created with elements that returns a true value. The callback function takes three arguments:</p>
+					<ol>
+						  <li>The value of the index</li>
+  						<li>The index argument</li>
+							<li>The Array object.</li>
+					</ol>
+				<p>So a better solution would be to filter the arrays seperately and concat their return values:</p>
+				<iframe width="100%" height="300" src="//jsfiddle.net/duggiemitchell/5nqmq4ou/embedded/js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+<! --- BACK TO TOP --->
+<p id="back-top">
+	<a href="#top"><i class="fa fa-angle-up"></i></a>
+</p>
+<! --- PAGINATION --->
+<div class="container">
+	<nav>
+  	<ul class="pager">
+    	<li>
+				<a href="/articles.html">
+					<i class="fa fa-long-arrow-left">&nbsp;BACK TO ARTICLES</i>
+				</a>
+			</li>
+  	</ul>
+</nav>
+</div>
+    <footer>
+      <div class="container">
+        <p>Made with Love by <a href="https://twitter.com/duggiemitchell"><span>Erica Mitchell</span></a></p>
+        <p>Follow:</p>
+          <i class="fa fa-github"></i>
+          <i class="fa fa-linkedin"></i>
+          <i class="fa fa-twitter"></i>
+
+
+      </div>
+    </footer>
+    <!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/SmoothScroll.js"></script>
+		<script src="/js/theme-scripts.js"></script>
+	</body>
+</html>
