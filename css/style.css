@@ -86,6 +86,33 @@ iframe {
 	padding: 20px;
 }
 /*--------------------
+				404
+--------------------*/
+.four_oh_four 	{
+	position: relative;
+	background: #000 url("/images/Erica/404.jpg");
+	height: 100vh;
+	background-size: cover;
+	overflow: hidden;
+	color: #fff;
+	line-height: 2em;
+	text-transform: uppercase;
+	text-align: center;
+}
+.four_oh_four-text {
+	font-size: 3em;
+}
+.four_oh_four-text h1{
+	color: #fff;
+	font-size: 5em;
+	margin-top: 10%;
+}
+.four_oh_four-text h3{
+	color: #E9D460;
+	font-weight: bold;
+}
+
+/*--------------------
 1.1 Reset bootstrap
 --------------------*/
 
