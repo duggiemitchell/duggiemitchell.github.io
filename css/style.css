@@ -347,6 +347,10 @@ font-weight: 700;
 #portfolio {
 	margin-top: 0;
 }
+.ot-portfolio-item img {
+	height: 385px;
+	width: 100%;
+}
 figure {
 	position: relative;
     float: left;
